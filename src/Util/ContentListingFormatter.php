@@ -85,7 +85,7 @@ class ContentListingFormatter
             return true;
         }
 
-        return strpos($entry['path'], $this->directory . '/') === 0;
+        return strpos( strtolower($entry['path']) , strtolower($this->directory) . '/' ) === 0;
     }
 
     /**
